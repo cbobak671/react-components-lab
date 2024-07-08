@@ -1,16 +1,19 @@
 import React from "react";
 import "./WeatherForecast.css";
 
-const WeatherForecast = ({day, conditions, time}) => {
+const WeatherForecast = (props) => {
+  const { day, img, imgAlt, conditions, time } = props;
   return (
     <div className="weather">
       <h2>{day}</h2>
-      <img src="" alt="" />
+      <img src={img} alt={imgAlt} />
       <p>
-        <span>Conditions: {conditions} </span>current weather conditions
+        <span>Conditions: </span>
+        {conditions}
       </p>
       <p>
-        <span>Time: {time}</span>time of day
+        <span>Time: </span>
+        {time}
       </p>
     </div>
   );
